@@ -7,7 +7,7 @@ class App extends Component {
       <div className="App">
         {(() => {
           let nodes: JSX.Element[] = [];
-          for (let i = 1; i <= 64; i++) {
+          for (let i = 1; i <= 20; i++) {
             nodes.push(<BerryDisplay
               key={`berry${i}`}
               berryID={i}

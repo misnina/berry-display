@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Flavor from './Flavor';
 
 interface IProps {
   berryID: number
@@ -104,11 +105,19 @@ class BerryDisplay extends Component<IProps, IState> {
     return (
       <div>
         <p>Name: {name.charAt(0).toUpperCase() + name.slice(1)}</p>
+        <p>ID: {id}</p>
         Favors: <ul>
           {flavors.map(type => {
             return (
               <li
-                key={`flavor ${id} ${type.flavor.name}`}>
+                key={`list-${id}-${type.flavor.name}`}
+              >
+                <Flavor
+                  key={`flavor-${id}-${type.flavor.name}`}
+                  name={type.flavor.name}
+                  id={id}
+                  potency={type.potency}
+                />
                 {type.flavor.name}: {type.potency}
               </li>
             )
@@ -121,7 +130,6 @@ class BerryDisplay extends Component<IProps, IState> {
   fetchAPI() {
     axios.get(`https://pokeapi.co/api/v2/berry/${this.props.berryID}`)
       .then(res => {
-        console.log(res.data);
         this.setState({ info: res.data });
       })
   }
