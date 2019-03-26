@@ -1,10 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-html, body {
+$header-color: #A9D15F;
+$panel-color: rgb(238, 238, 234);
+$background-color: rgb(161, 163, 129);
+$background-image: '../symphony.png';
+$font-color: #422833;
+$font: 'Open Sans', sans-serif;
+
+
+html, body, #root {
   margin: 0;
-  background-color: lightblue;
+  padding: 0;
+  height: 100%;
+  background-image: url($background-image);
+  font-family: $font;
+  color: $font-color;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    rgba($background-color, 0.25),
+    rgba($background-color, 0.25)
+  );
 }
 
 .info-panel {
   margin: 30px;
   margin-bottom: 50px;
+  width: 300px;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 6px 13px 0px rgba(65,75,79,1);
+}
+
+header {
+  padding: 10px;
+  background-color: $header-color;
+
+  p {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.details {
+  display: flex;
+  padding: 10px;
+  background-color: $panel-color;
+
+  .size {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .base-stats {
+    flex-grow: 1;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      .flavor-text {
+        font-size: 10px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .app {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
