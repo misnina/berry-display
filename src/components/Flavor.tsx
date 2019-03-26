@@ -17,13 +17,13 @@ class Flavor extends Component<IProps, {}> {
   render() {
     let potency = this.props.potency;
     let stars: JSX.Element[] = [];
-    let fullStars: number = potency % 4;
+    let fullStars: number = potency / 10;
     let halfStars: number = potency % 10 ? 0 : 1;
     let emptyStars: number = 4 - fullStars;
-    halfStars ? null : fullStars = fullStars - 2;
+    halfStars ? null : fullStars--;
 
 
-    for (let i = 0; i <= (fullStars - halfStars); i++) {
+    for (let i = 0; i < (fullStars); i++) {
       stars.push(<FontAwesomeIcon
         key={`fullstars-${this.props.id}-${i}`}
         icon={['fas', 'star']} />);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BerryDisplay from './components/BerryDisplay';
+import './styles/index.scss';
 
 class App extends Component {
   render() {
@@ -7,7 +8,7 @@ class App extends Component {
       <div className="App">
         {(() => {
           let nodes: JSX.Element[] = [];
-          for (let i = 1; i <= 20; i++) {
+          for (let i = 1; i <= 2; i++) {
             nodes.push(<BerryDisplay
               key={`berry${i}`}
               berryID={i}

@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Flavor from './Flavor';
+import Size from './Size';
+import Growth from './Growth';
 
 interface IProps {
   berryID: number
 }
 
 interface IState {
+  item: {
+    sprites: {
+      default: string
+    }
+  },
   info: {
     id: number,
     name: string,
@@ -14,6 +21,9 @@ interface IState {
     size: number,
     firmness: {
       name: string
+    },
+    item: {
+      url: string
     },
     flavors: [
       {
@@ -55,6 +65,11 @@ class BerryDisplay extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
+      item: {
+        sprites: {
+          default: ''
+        }
+      },
       info: {
         id: 0,
         name: '',
@@ -62,6 +77,9 @@ class BerryDisplay extends Component<IProps, IState> {
         size: 0,
         firmness: {
           name: ''
+        },
+        item: {
+          url: ''
         },
         flavors: [
           {
@@ -103,9 +121,19 @@ class BerryDisplay extends Component<IProps, IState> {
     const { info } = this.state;
     const { id, name, growth_time, size, firmness, flavors } = info;
     return (
-      <div>
-        <p>Name: {name.charAt(0).toUpperCase() + name.slice(1)}</p>
-        <p>ID: {id}</p>
+      <div className="info-panel">
+        <div>
+          <img src={this.state.item.sprites.default} />
+          {name.charAt(0).toUpperCase() + name.slice(1)}
+        </div>
+        <div>#{id}</div>
+        <div>
+          <Growth
+            id={id}
+            growth_time={growth_time}
+          />
+          {growth_time} hours per stage
+        </div>
         Favors: <ul>
           {flavors.map(type => {
             return (
@@ -123,19 +151,27 @@ class BerryDisplay extends Component<IProps, IState> {
             )
           })}
         </ul>
+        Size: {size} <Size
+          key={`size-${id}`}
+          size={size}
+          id={id}
+        />
       </div>
     )
   }
 
-  fetchAPI() {
+  fetchBerry() {
     axios.get(`https://pokeapi.co/api/v2/berry/${this.props.berryID}`)
       .then(res => {
         this.setState({ info: res.data });
+        return axios.get(`${this.state.info.item.url}`)
+      }).then(res => {
+        this.setState({ item: res.data });
       })
   }
 
   componentDidMount() {
-    this.fetchAPI();
+    this.fetchBerry();
   }
 }
 
