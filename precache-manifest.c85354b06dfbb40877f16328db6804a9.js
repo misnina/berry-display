@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/berry-display/static/js/runtime~main.0b1136df.js"
   },
   {
-    "revision": "f1e05373db800767c059",
-    "url": "/berry-display/static/js/main.fddced09.chunk.js"
+    "revision": "1852ca7b1366c71e5bed",
+    "url": "/berry-display/static/js/main.7638b52b.chunk.js"
   },
   {
     "revision": "3542de56fae3f6fb2dab",
     "url": "/berry-display/static/js/2.7fb1241b.chunk.js"
   },
   {
-    "revision": "f1e05373db800767c059",
+    "revision": "1852ca7b1366c71e5bed",
     "url": "/berry-display/static/css/main.5431052d.chunk.css"
   },
   {
-    "revision": "3d97cd80cc8e161bbf6b168260ce8f28",
+    "revision": "eaeb9a076c3c09c734c767af79f43cb8",
     "url": "/berry-display/index.html"
   }
 ];

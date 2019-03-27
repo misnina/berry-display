@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/berry-display/precache-manifest.57dfc40734aae94dff2846d9d9a043f4.js"
+  "/berry-display/precache-manifest.c85354b06dfbb40877f16328db6804a9.js"
 );
 
 workbox.clientsClaim();
