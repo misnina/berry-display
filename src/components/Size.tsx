@@ -11,7 +11,7 @@ class Size extends Component<IProps, {}> {
   render() {
     return (
       <div>
-        <img src={`/size/${this.props.id}.png`} style={{ height: `${this.props.size / 2}px` }} />
+        <img src={`/size/${this.props.id}.png`} style={{ height: `${this.props.size / 3}px` }} />
       </div>
     )
   }

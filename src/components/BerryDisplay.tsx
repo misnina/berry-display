@@ -120,49 +120,51 @@ class BerryDisplay extends Component<IProps, IState> {
   render() {
     const { info } = this.state;
     const { id, name, growth_time, size, firmness, flavors } = info;
+    let firm = firmness.name.replace(/-/g, ' ');
     return (
       <div className="info-panel">
         <header>
           <div>
             <img src={this.state.item.sprites.default} />
             <p>#{id}</p>
-            {name.charAt(0).toUpperCase() + name.slice(1)}
+            <h2>{name.charAt(0).toUpperCase() + name.slice(1)}</h2>
           </div>
         </header>
 
         <div className="details">
           <div className="base-stats">
-            Firmness: {firmness.name}
+            <strong>Firmness:</strong> {firm}
             <div>
               <Growth
                 id={id}
                 growth_time={growth_time}
               />
-              {growth_time} hours per stage
+              <strong>{growth_time} hours</strong> per stage
+              <div><meter value={growth_time} min="0" max="24"></meter></div>
             </div>
-            <ul>Flavors:
+            <ul><strong>Flavors:</strong>
               {flavors.map((type, i) => {
-              return (
-                <li
-                  key={`list-${id}-${type.flavor.name}`}
-                >
-                  <Flavor
-                    key={`flavor-${id}-${type.flavor.name}`}
-                    name={type.flavor.name}
-                    id={id}
-                    potency={type.potency}
-                    flavor={i}
-                  />
-                  <div className="flavor-text">
-                    {type.flavor.name}: {type.potency}
-                  </div>
-                </li>
-              )
-            })}
+                return (
+                  <li
+                    key={`list-${id}-${type.flavor.name}`}
+                  >
+                    <Flavor
+                      key={`flavor-${id}-${type.flavor.name}`}
+                      name={type.flavor.name}
+                      id={id}
+                      potency={type.potency}
+                      flavor={i}
+                    />
+                    <div className="flavor-text">
+                      {type.flavor.name}: {type.potency}
+                    </div>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           <div className="size">
-            Size: {size} <Size
+            <strong>Size:</strong> {size} <Size
               key={`size-${id}`}
               size={size}
               id={id}

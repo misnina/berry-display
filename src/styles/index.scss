@@ -13,6 +13,7 @@ html, body, #root {
   padding: 0;
   height: 100%;
   background-image: url($background-image);
+  background-attachment: fixed;
   font-family: $font;
   color: $font-color;
 }
@@ -24,6 +25,8 @@ html, body, #root {
   min-height: 100%;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   background: linear-gradient(
     rgba($background-color, 0.25),
     rgba($background-color, 0.25)
@@ -52,12 +55,34 @@ header {
   img {
     vertical-align: middle;
   }
+
+  h2 {
+    display: inline-block;
+  }
 }
 
 .details {
   display: flex;
   padding: 10px;
   background-color: $panel-color;
+
+
+  meter {
+    width: 100%;
+    border-radius: 5px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background: white;
+  }
+
+  meter::-webkit-meter-optimum-value, meter::-moz-meter-bar {
+    background: none;
+    background-color:$header-color;
+    border-radius: 5px;
+  }
 
   .size {
     flex-grow: 1;
@@ -76,12 +101,5 @@ header {
         margin-bottom: 5px;
       }
     }
-  }
-}
-
-@media (min-width: 800px) {
-  .app {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 }
