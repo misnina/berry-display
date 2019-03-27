@@ -1,14 +1,14 @@
 {
-  "main.css": "/berry-display/static/css/main.5431052d.chunk.css",
-  "main.js": "/berry-display/static/js/main.7638b52b.chunk.js",
-  "main.js.map": "/berry-display/static/js/main.7638b52b.chunk.js.map",
-  "runtime~main.js": "/berry-display/static/js/runtime~main.0b1136df.js",
-  "runtime~main.js.map": "/berry-display/static/js/runtime~main.0b1136df.js.map",
-  "static/js/2.7fb1241b.chunk.js": "/berry-display/static/js/2.7fb1241b.chunk.js",
-  "static/js/2.7fb1241b.chunk.js.map": "/berry-display/static/js/2.7fb1241b.chunk.js.map",
-  "index.html": "/berry-display/index.html",
-  "precache-manifest.8cc36a40b078b540d55fadcb55cbfde7.js": "/berry-display/precache-manifest.8cc36a40b078b540d55fadcb55cbfde7.js",
-  "service-worker.js": "/berry-display/service-worker.js",
-  "static/css/main.5431052d.chunk.css.map": "/berry-display/static/css/main.5431052d.chunk.css.map",
-  "static/media/index.scss": "/berry-display/static/media/symphony.fcb1692c.png"
+  "main.css": "https://misnina.github.io/berry-display/static/css/main.640428d8.chunk.css",
+  "main.js": "https://misnina.github.io/berry-display/static/js/main.ab21dba3.chunk.js",
+  "main.js.map": "https://misnina.github.io/berry-display/static/js/main.ab21dba3.chunk.js.map",
+  "runtime~main.js": "https://misnina.github.io/berry-display/static/js/runtime~main.d8f6d61b.js",
+  "runtime~main.js.map": "https://misnina.github.io/berry-display/static/js/runtime~main.d8f6d61b.js.map",
+  "static/js/2.7fb1241b.chunk.js": "https://misnina.github.io/berry-display/static/js/2.7fb1241b.chunk.js",
+  "static/js/2.7fb1241b.chunk.js.map": "https://misnina.github.io/berry-display/static/js/2.7fb1241b.chunk.js.map",
+  "index.html": "https://misnina.github.io/berry-display/index.html",
+  "precache-manifest.d2fbf2f76012ed34ac7bddb5935bde46.js": "https://misnina.github.io/berry-display/precache-manifest.d2fbf2f76012ed34ac7bddb5935bde46.js",
+  "service-worker.js": "https://misnina.github.io/berry-display/service-worker.js",
+  "static/css/main.640428d8.chunk.css.map": "https://misnina.github.io/berry-display/static/css/main.640428d8.chunk.css.map",
+  "static/media/index.scss": "https://misnina.github.io/berry-display/static/media/symphony.fcb1692c.png"
 }

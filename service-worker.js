@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/berry-display/precache-manifest.8cc36a40b078b540d55fadcb55cbfde7.js"
+  "https://misnina.github.io/berry-display/precache-manifest.d2fbf2f76012ed34ac7bddb5935bde46.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/berry-display/index.html", {
+workbox.routing.registerNavigationRoute("https://misnina.github.io/berry-display/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
