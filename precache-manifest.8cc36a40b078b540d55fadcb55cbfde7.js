@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/berry-display/static/css/main.5431052d.chunk.css"
   },
   {
-    "revision": "eaeb9a076c3c09c734c767af79f43cb8",
+    "revision": "ad75645d8663e981d4cbe45a48aab73e",
     "url": "/berry-display/index.html"
   }
 ];
