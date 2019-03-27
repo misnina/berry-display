@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://misnina.github.io/berry-display/precache-manifest.d2fbf2f76012ed34ac7bddb5935bde46.js"
+  "https://misnina.github.io/berry-display/precache-manifest.6e9f11cf8105afe8cc0058f30978bc3d.js"
 );
 
 workbox.clientsClaim();

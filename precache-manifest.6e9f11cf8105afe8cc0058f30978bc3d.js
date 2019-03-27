@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "https://misnina.github.io/berry-display/static/js/runtime~main.d8f6d61b.js"
   },
   {
-    "revision": "345338ef37480b0497c6",
-    "url": "https://misnina.github.io/berry-display/static/js/main.ab21dba3.chunk.js"
+    "revision": "557470013e1f94058c0a",
+    "url": "https://misnina.github.io/berry-display/static/js/main.dbe81053.chunk.js"
   },
   {
     "revision": "3542de56fae3f6fb2dab",
     "url": "https://misnina.github.io/berry-display/static/js/2.7fb1241b.chunk.js"
   },
   {
-    "revision": "345338ef37480b0497c6",
-    "url": "https://misnina.github.io/berry-display/static/css/main.640428d8.chunk.css"
+    "revision": "557470013e1f94058c0a",
+    "url": "https://misnina.github.io/berry-display/static/css/main.73b697bc.chunk.css"
   },
   {
-    "revision": "1897d6c29d051f93daaba0e9b2edd1fc",
+    "revision": "9f491f7ee953ad7b012db16823621dcd",
     "url": "https://misnina.github.io/berry-display/index.html"
   }
 ];
